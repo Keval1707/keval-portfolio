@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  react-app:
+    build: .
+    ports:
+      - "9193:9193"
+    environment:
+      - NODE_ENV=production
+    # 🔥 Remove the volumes during production build
+    # volumes:
+    #   - .:/app
+    #   - /app/node_modules
