@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation(); // Get current route
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +18,13 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const isHomePage = location.pathname === '/'; // Check if current path is home
+
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+    <header className={`${isHomePage ? 'home-header' : 'header'} ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        <Link to="/" className="logo">
-          <span className="logo-text">{"<DevPortfolio/>"}</span>
+        <Link to="/" className={`logo ${scrolled ? 'scrolled' : ''}`}>
+          <span className="logo-text">{"<Ks/>"}</span>
         </Link>
         
         <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>

@@ -113,7 +113,7 @@ function createSolutions() {
 
       {/* Skills Preview Section */}
       <div className="skills-preview">
-        <h2>Technologies I Work With</h2>
+        <h3>Technologies I Work With</h3>
         <div className="skills-grid">
           {[
             { name: "React", icon: "devicon-react-original" },
@@ -125,6 +125,11 @@ function createSolutions() {
             { name: "SQL", icon: "devicon-mysql-plain" },
             { name: "JavaScript", icon: "devicon-javascript-plain" },
             { name: "Git", icon: "devicon-git-plain" },
+            {
+              name: "AWS",
+              level: 75,
+              icon: "devicon-amazonwebservices-plain colored",
+            },
           ].map((skill) => (
             <div
               key={skill.name}
@@ -144,18 +149,18 @@ function createSolutions() {
           <div className="projects-highlight">
             {[
               {
-                title: "E-commerce Platform",
-                description:
-                  "Full-featured online store with payment integration and admin dashboard.",
+                title: "Shree Hari Nursery",
+                description: "Shree Hari Nursery is a clean, responsive website designed and developed by me to showcase a plant nursery's offerings. The site features a modern layout, intuitive navigation, and product display to support online visibility and customer engagement.",
                 technologies: ["React", "Node.js", "MongoDB"],
-                image: "/project1.jpg",
+                image: './Shree_Hari_Nursery.jpg',
+                link: 'https://shreeharinursery.technest.tech/',
               },
               {
-                title: "Task Management App",
-                description:
-                  "Productivity application with drag-and-drop functionality.",
-                technologies: ["Angular", "Node.js", "MongoDB", "Material UI"],
-                image: "/project2.jpg",
+                title: "Keval's Portfolio",
+                description: 'Responsive portfolio with animated components and dark/light theme toggle.',
+                technologies: ['React', 'Tailwind CSS', 'Vite' ],
+                image: './Portfolio.png',
+                link: "https://keval.technest.tech/",
               },
             ].map((project) => (
               <div key={project.title} className="project-highlight-card">

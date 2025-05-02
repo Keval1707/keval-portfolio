@@ -129,15 +129,37 @@ img {
   z-index: 1000;
   transition: var(--transition);
   padding: 1rem 0;
-  /* background-color: rgba(255, 255, 255, 0.95); */
   color: var(--primary-color);
+  font-weight: 700;
+
+}
+.home-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: var(--transition);
+  padding: 1rem 0;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
 }
 
-.header.scrolled {
+.home-header.scrolled {
   background-color: rgba(255, 255, 255, 0.95);
-  color: var(--dark-color);
+  color: var(--primary-color);
   box-shadow: var(--shadow-sm);
   padding: 0.5rem 0;
+  font-weight: 700;
+
+}
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--secondary-color);
+  box-shadow: var(--shadow-sm);
+  padding: 0.5rem 0;
+  font-weight: 700;
+
 }
 
 .header-container {
@@ -151,7 +173,17 @@ img {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
+
 }
+.home-header .logo{
+  color: rgb(255, 255, 255);
+
+
+}
+.logo.scrolled {
+  color: var(--primary-color);
+}
+
 
 .logo-text {
   position: relative;
@@ -242,7 +274,7 @@ img {
 
 .hero-text {
   margin-bottom: 2rem;
-  opacity: 0;
+  /* opacity: 0; */
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
@@ -372,7 +404,7 @@ img {
   padding: 0.3rem 0.8rem;
   border-radius: 5px;
   font-size: 0.8rem;
-  opacity: 0;
+  /* opacity: 0; */
   visibility: hidden;
   transition: var(--transition);
 }
@@ -400,7 +432,7 @@ img {
 .about-image {
   flex: 1;
   position: sticky;
-  top: 100px;
+  top: 80px;
 }
 
 .image-wrapper {
@@ -633,6 +665,7 @@ img {
 /* Projects Page */
 .projects-page {
   background-color: white;
+  
 }
 
 .projects-header {
@@ -668,7 +701,7 @@ img {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   gap: 2rem;
 }
 
@@ -678,7 +711,7 @@ img {
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
-  opacity: 0;
+  /* opacity: 0; */
   transform: translateY(20px);
 }
 
@@ -694,7 +727,7 @@ img {
 
 .project-image {
   position: relative;
-  height: 250px;
+  height: 350px;
   overflow: hidden;
 }
 
@@ -714,7 +747,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: rgba(107, 99, 255, 0.412); */
+  background: rgba(107, 99, 255, 0.412);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -745,6 +778,7 @@ img {
   color: white;
   border: 2px solid white;
 }
+
 
 .view-btn:hover, .code-btn:hover {
   transform: translateY(-3px);
@@ -888,10 +922,16 @@ img {
   margin-bottom: 1.5rem;
   color: #2d2d3a;
 }
-
-.social-links {
+.social-links{
   display: flex;
   justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.footer-section .social-links {
+  display: flex;
+  justify-content: flex-start;
+  width: 30%;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
@@ -933,7 +973,7 @@ img {
 
 /* Animations */
 .info-card {
-  opacity: 0;
+  /* opacity: 0; */
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
@@ -994,6 +1034,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+  /* background-color: red; */
 }
 
 .footer-section h3 {
@@ -1046,8 +1087,8 @@ img {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
+  /* opacity: 0; */
+  transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -1066,6 +1107,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
+  padding:0 0% ;
 }
 
 .project-highlight-card {
@@ -1306,7 +1348,7 @@ img {
   bottom: 0;
   background: var(--gradient);
   z-index: -1;
-  opacity: 0;
+  /* opacity: 0; */
   transition: var(--transition);
 }
 
@@ -1379,7 +1421,7 @@ img {
   }
   
   .hamburger.active .line:nth-child(2) {
-    opacity: 0;
+    /* opacity: 0; */
   }
   
   .hamburger.active .line:nth-child(3) {
@@ -1444,7 +1486,7 @@ img {
 @keyframes textFlip {
   0% {
     transform: rotateX(90deg);
-    opacity: 0;
+    /* opacity: 0; */
   }
   100% {
     transform: rotateX(0);
@@ -1454,7 +1496,7 @@ img {
 
 @keyframes countUp {
   from {
-    opacity: 0;
+    /* opacity: 0; */
     transform: translateY(20px);
   }
   to {

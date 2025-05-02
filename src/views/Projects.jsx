@@ -6,12 +6,23 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      description: 'Full-featured online store with Stripe payments, product catalog, and admin dashboard.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
-      category: 'fullstack',
-      image: '/project1.jpg',
-      link: null,
+      title: 'Shree Hari Nursery',
+      description: "Shree Hari Nursery is a clean, responsive website designed and developed by me to showcase a plant nursery's offerings. The site features a modern layout, intuitive navigation, and product display to support online visibility and customer engagement.",
+      technologies: ['React', 'Node.js' , 'Material UI' ],
+      category: 'frontend',
+      image: './Shree_Hari_Nursery.jpg',
+      link: "https://shreeharinursery.technest.tech/",
+      github: null,
+      featured: true
+    },
+    {
+      id: 4,
+      title: "Keval's Portfolio",
+      description: 'Responsive portfolio with animated components and dark/light theme toggle.',
+      technologies: ['React', 'Tailwind CSS', 'Vite' ],
+      category: 'frontend',
+      image: './Portfolio.png',
+      link: "https://keval.technest.tech/",
       github: null,
       featured: true
     },
@@ -37,17 +48,7 @@ const Projects = () => {
       github: null,
       featured: false
     },
-    {
-      id: 4,
-      title: "Keval's Portfolio",
-      description: 'Responsive portfolio with animated components and dark/light theme toggle.',
-      technologies: ['React', 'Tailwind CSS', 'Vite' ],
-      category: 'frontend',
-      image: './Portfolio.png',
-      link: null,
-      github: null,
-      featured: true
-    },
+    
     {
       id: 5,
       title: 'Weather Dashboard',
